@@ -7,3 +7,5 @@ Severstal is leading the charge in efficient steel mining and production. They b
 The production process of flat sheet steel is especially delicate. From heating and rolling, to drying and cutting, several machines touch flat steel by the time it’s ready to ship. Today, Severstal uses images from high frequency cameras to power a defect detection algorithm.
 
 We succesfully develop a TensorRT optimised defect detection algorithm based on U-net model architecture trained on PyTorch.
+
+Competition link https://www.kaggle.com/c/severstal-steel-defect-detection
