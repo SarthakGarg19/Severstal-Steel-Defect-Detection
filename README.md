@@ -6,6 +6,18 @@ Severstal is leading the charge in efficient steel mining and production. They b
 
 The production process of flat sheet steel is especially delicate. From heating and rolling, to drying and cutting, several machines touch flat steel by the time it’s ready to ship. Today, Severstal uses images from high frequency cameras to power a defect detection algorithm.
 
-We succesfully develop a TensorRT optimised defect detection algorithm based on Deep Learning U-net architecture trained using PyTorch on the data downloadable from the link below.
+## TensorRT
 
+The core of NVIDIA® TensorRT™ is a C++ library that facilitates high-performance inference on NVIDIA graphics processing units (GPUs). It is designed to work in a complementary fashion with training frameworks such as TensorFlow, Caffe, PyTorch, MXNet, etc. It focuses specifically on running an already-trained network quickly and efficiently on a GPU for the purpose of generating a result (a process that is referred to in various places as scoring, detecting, regression, or inference).
+
+Some training frameworks such as TensorFlow have integrated TensorRT so that it can be used to accelerate inference within the framework. Alternatively, TensorRT can be used as a library within a user application. It includes parsers for importing existing models from Caffe, ONNX, or TensorFlow, and C++ and Python APIs for building models programmatically.
+
+![alt text](images/images/tensorrt.png?raw=true)
+
+
+We succesfully develop a TensorRT optimised defect detection algorithm based on Deep Learning U-net architecture trained using PyTorch on the data downloadable from the references below.
+
+## References
+
+TensorRT Doc: https://docs.nvidia.com/deeplearning/tensorrt/developer-guide/index.html
 Dataset link https://www.kaggle.com/c/severstal-steel-defect-detection/data
