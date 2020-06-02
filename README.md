@@ -30,7 +30,7 @@ with amp.scale_loss(loss, optimizer) as scaled_loss:
 
 ## Neural Network Architecture
 
-[U-net](https://arxiv.org/abs/1505.04597) is used to solve the segmentation problem. U-net model is mostly used for Biomedical use-cases. It follows an encoder-decoder architecture and consists of mainly convolution layers and no-dense layers. It downscales the image to learn the "WHAT" in the imagesnd then upscales the convolution layer to learn the "WHERE" in the images
+[U-net](https://arxiv.org/abs/1505.04597) is used to solve the segmentation problem. U-net model is mostly used for Biomedical use-cases. It follows an encoder-decoder architecture and consists of mainly convolution layers and no-dense layers. It downscales the image to learn the "WHAT" in the images and then upscales the convolution layer to learn the "WHERE" in the images
 <p align="center">
 <img src = "https://github.com/SarthakGarg13/Severstal-Steel-Defect-Detection/blob/master/images/unet.JPG">
 </p>
