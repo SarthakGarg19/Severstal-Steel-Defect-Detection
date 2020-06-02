@@ -18,6 +18,7 @@ The benefits of mixed precision training are:
 - Reduction of memory requirements for training models, enabling larger models or larger minibatches.
 
 Using mixed precision training requires two steps:
+
 1 Porting the model to use the FP16 data type where appropriate.
 2 Using loss scaling to preserve small gradient values.
 
@@ -74,9 +75,9 @@ Docker Images for the Jupyter notebooks:
 
 ## References
 
-1Mixed Precision Training Doc: https://docs.nvidia.com/deeplearning/performance/mixed-precision-training/index.html 
+1 Mixed Precision Training Doc: https://docs.nvidia.com/deeplearning/performance/mixed-precision-training/index.html 
 
-2TensorRT Doc: https://docs.nvidia.com/deeplearning/tensorrt/developer-guide/index.html
+2 TensorRT Doc: https://docs.nvidia.com/deeplearning/tensorrt/developer-guide/index.html
 
 3 Onnx simplifier https://github.com/daquexian/onnx-simplifier
 
