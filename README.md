@@ -8,6 +8,19 @@ The production process of flat sheet steel is especially delicate. From heating 
 
 ## Automatic Mixed Precision Training
 
+Automatic Mixed Precision (AMP) makes all the required adjustments to train models using mixed precision, providing two benefits over manual operations:
+- Developers need not modify network model code, reducing development and maintenance effort.
+- Using AMP maintains forward and backward compatibility with all the APIs for defining and running models.
+
+The benefits of mixed precision training are:
+- Speed up of math-intensive operations, such as linear and convolution layers, by using Tensor Cores.
+- Speed up memory-limited operations by accessing half the bytes compared to single-precision.
+- Reduction of memory requirements for training models, enabling larger models or larger minibatches.
+
+Using mixed precision training requires two steps:
+1 Porting the model to use the FP16 data type where appropriate.
+2 Using loss scaling to preserve small gradient values.
+
 ```
 model, optimizer = amp.initialize(model, optimizer, opt_level="O1")
 with amp.scale_loss(loss, optimizer) as scaled_loss:
@@ -61,8 +74,10 @@ Docker Images for the Jupyter notebooks:
 
 ## References
 
-1 TensorRT Doc: https://docs.nvidia.com/deeplearning/tensorrt/developer-guide/index.html
+1Mixed Precision Training Doc: https://docs.nvidia.com/deeplearning/performance/mixed-precision-training/index.html 
 
-2 Onnx simplifier https://github.com/daquexian/onnx-simplifier
+2TensorRT Doc: https://docs.nvidia.com/deeplearning/tensorrt/developer-guide/index.html
 
-3 Dataset link https://www.kaggle.com/c/severstal-steel-defect-detection/data
+3 Onnx simplifier https://github.com/daquexian/onnx-simplifier
+
+4 Dataset link https://www.kaggle.com/c/severstal-steel-defect-detection/data
