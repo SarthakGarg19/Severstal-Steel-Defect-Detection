@@ -23,7 +23,7 @@ We have used the ONNX-Parser for the conversion Pytorch-TensorRT.
 - Model is trained on Pytorch, and is saved as model.pth file. 
 - Followed by converting .pth -> .onnx present in -simplify onnx model.html- 
 - After converting model to onnx, we simplify it using the [Onnx-Simplifier](https://github.com/daquexian/onnx-simplifier).
--
+- Followed by creating TensorRT engine(model.trt) and serializing it for later use.
 
 
 
@@ -33,10 +33,28 @@ We have used the ONNX-Parser for the conversion Pytorch-TensorRT.
 
 
 
+## Environment
 
+Replication of this repo is pretty simple.
+-Install Docker
+-Pull docker containers using:
+  -docker pull "image-name:tag"
+-Run container on Ubuntu using the command:
+  -docker run -it -v "/path/to/directory" -p 1111:8888 "image-name"
+-Open JupyterLab/JupyterNotebook
+-Run the notebooks
+
+### Docker Images
+
+Docker Images for the Jupyter notebooks:
+-Training Notebook: sg22/traindefect:version1
+-Onnx-TRT Notebook: sg22/traindefect:version1
+-Inference Notebook: sg22/defectinferencetrt:version1
 
 ## References
 
-TensorRT Doc: https://docs.nvidia.com/deeplearning/tensorrt/developer-guide/index.html
-Onnx simplifier https://github.com/daquexian/onnx-simplifier
-Dataset link https://www.kaggle.com/c/severstal-steel-defect-detection/data
+-TensorRT Doc: https://docs.nvidia.com/deeplearning/tensorrt/developer-guide/index.html
+
+-Onnx simplifier https://github.com/daquexian/onnx-simplifier
+
+-Dataset link https://www.kaggle.com/c/severstal-steel-defect-detection/data
