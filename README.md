@@ -17,7 +17,7 @@ Some training frameworks such as TensorFlow have integrated TensorRT so that it 
 </p>
 
 <p align="center">
-<img src = "https://github.com/SarthakGarg13/Severstal-Steel-Defect-Detection/blob/master/images/tensorrt.png">
+<img src = "https://github.com/SarthakGarg13/Severstal-Steel-Defect-Detection/blob/master/images/onnx-tensorrt.png">
 </p>
 
 
