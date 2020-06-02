@@ -28,6 +28,14 @@ with amp.scale_loss(loss, optimizer) as scaled_loss:
     scaled_loss.backward()
 ```
 
+## Neural Network Architecture
+
+[U-net](https://arxiv.org/abs/1505.04597) is used to solve the segmentation problem. U-net model is mostly used for Biomedical use-cases. It follows an encoder-decoder architecture and consists of mainly convolution layers and no-dense layers. It downscales the image to learn the "WHAT" in the imagesnd then upscales the convolution layer to learn the "WHERE" in the images
+<p align="center">
+<img src = "https://github.com/SarthakGarg13/Severstal-Steel-Defect-Detection/blob/master/images/unet.JPG">
+</p>
+
+
 ## TensorRT
 
 The core of NVIDIA® TensorRT is a C++ library that facilitates high-performance inference on NVIDIA graphics processing units (GPUs). It is designed to work in a complementary fashion with training frameworks such as TensorFlow, Caffe, PyTorch, MXNet, etc. It focuses specifically on running an already-trained network quickly and efficiently on a GPU for the purpose of generating a result (a process that is referred to in various places as scoring, detecting, regression, or inference).
@@ -82,3 +90,5 @@ Docker Images for the Jupyter notebooks:
 3. Onnx simplifier https://github.com/daquexian/onnx-simplifier
 
 4. Dataset link https://www.kaggle.com/c/severstal-steel-defect-detection/data
+
+5. U-Net: https://arxiv.org/abs/1505.04597
