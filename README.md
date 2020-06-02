@@ -84,11 +84,7 @@ Docker Images for the Jupyter notebooks:
 ## References
 
 1. Mixed Precision Training Doc: https://docs.nvidia.com/deeplearning/performance/mixed-precision-training/index.html 
-
 2. TensorRT Doc: https://docs.nvidia.com/deeplearning/tensorrt/developer-guide/index.html
-
 3. Onnx simplifier https://github.com/daquexian/onnx-simplifier
-
 4. Dataset link https://www.kaggle.com/c/severstal-steel-defect-detection/data
-
 5. U-Net: https://arxiv.org/abs/1505.04597
