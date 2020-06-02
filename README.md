@@ -19,9 +19,13 @@ Some training frameworks such as TensorFlow have integrated TensorRT so that it 
 
 TensorRT engine could be converted from the following frameworks using UFF parser, ONNX parser or TFTRT. The TensorRT API includes implementations for the most common deep learning layers. You can also use the C++ Plugin API or Python Plugin API to provide implementations for infrequently used or more innovative layers that are not supported out-of-the-box by TensorRT.
 
-We have used the ONNX-Parser for the conversion.
-Model is trained on Pytorch, and is saved as model.pth file. Followed by converting .pth -> .onnx present in #simplify onnx model.html#
-We succesfully develop a TensorRT optimised defect detection algorithm based on Deep Learning U-net architecture trained using PyTorch on the data downloadable from the references below.
+We have used the ONNX-Parser for the conversion Pytorch-TensorRT.
+- Model is trained on Pytorch, and is saved as model.pth file. 
+- Followed by converting .pth -> .onnx present in -simplify onnx model.html- 
+- After converting model to onnx, we simplify it using the [Onnx-Simplifier](https://github.com/daquexian/onnx-simplifier).
+-
+
+
 
 <p align="center">
 <img src = "https://github.com/SarthakGarg13/Severstal-Steel-Defect-Detection/blob/master/images/onnx-tensorrt.png">
@@ -34,4 +38,5 @@ We succesfully develop a TensorRT optimised defect detection algorithm based on 
 ## References
 
 TensorRT Doc: https://docs.nvidia.com/deeplearning/tensorrt/developer-guide/index.html
+Onnx simplifier https://github.com/daquexian/onnx-simplifier
 Dataset link https://www.kaggle.com/c/severstal-steel-defect-detection/data
