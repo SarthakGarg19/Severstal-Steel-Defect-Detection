@@ -13,7 +13,7 @@ The core of NVIDIA® TensorRT™ is a C++ library that facilitates high-performa
 Some training frameworks such as TensorFlow have integrated TensorRT so that it can be used to accelerate inference within the framework. Alternatively, TensorRT can be used as a library within a user application. It includes parsers for importing existing models from Caffe, ONNX, or TensorFlow, and C++ and Python APIs for building models programmatically.
 
 <p allign="center">
-<img src = "./images/tensorrt.png>
+<img src = "https://github.com/SarthakGarg13/Severstal-Steel-Defect-Detection/blob/master/images/tensorrt.png">
 </p>
 
 
