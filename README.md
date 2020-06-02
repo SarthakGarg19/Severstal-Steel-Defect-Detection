@@ -20,7 +20,7 @@ The benefits of mixed precision training are:
 Using mixed precision training requires two steps:
 
 1. Porting the model to use the FP16 data type where appropriate.
-2. Using loss scaling to preserve small gradient values.
+1. Using loss scaling to preserve small gradient values.
 
 ```
 model, optimizer = amp.initialize(model, optimizer, opt_level="O1")
