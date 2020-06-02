@@ -1,4 +1,4 @@
-# Severstal-Steel-Defect-Detection
+# Severstal Steel Defect Detection
 
 Steel is one of the most important building materials of modern times. Steel buildings are resistant to natural and man-made wear which has made the material ubiquitous around the world. To help make production of steel more efficient, this competition will help identify defects.
 
