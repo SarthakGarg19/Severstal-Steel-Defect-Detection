@@ -8,11 +8,11 @@ The production process of flat sheet steel is especially delicate. From heating 
 
 ## Automatic Mixed Precision Training
 
-'''
+```
 model, optimizer = amp.initialize(model, optimizer, opt_level="O1")
 with amp.scale_loss(loss, optimizer) as scaled_loss:
     scaled_loss.backward()
-'''
+```
 
 ## TensorRT
 
