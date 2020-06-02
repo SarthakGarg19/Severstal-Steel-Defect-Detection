@@ -6,6 +6,14 @@ Severstal is leading the charge in efficient steel mining and production. They b
 
 The production process of flat sheet steel is especially delicate. From heating and rolling, to drying and cutting, several machines touch flat steel by the time it’s ready to ship. Today, Severstal uses images from high frequency cameras to power a defect detection algorithm.
 
+## Automatic Mixed Precision Training
+
+'''
+model, optimizer = amp.initialize(model, optimizer, opt_level="O1")
+with amp.scale_loss(loss, optimizer) as scaled_loss:
+    scaled_loss.backward()
+'''
+
 ## TensorRT
 
 The core of NVIDIA® TensorRT is a C++ library that facilitates high-performance inference on NVIDIA graphics processing units (GPUs). It is designed to work in a complementary fashion with training frameworks such as TensorFlow, Caffe, PyTorch, MXNet, etc. It focuses specifically on running an already-trained network quickly and efficiently on a GPU for the purpose of generating a result (a process that is referred to in various places as scoring, detecting, regression, or inference).
