@@ -51,7 +51,7 @@ TensorRT engine could be converted from the following frameworks using UFF parse
 
 We have used the ONNX-Parser for the conversion Pytorch-TensorRT.
 - Model is trained on Pytorch, and is saved as model.pth file. 
-- Followed by converting .pth -> .onnx present in -simplify onnx model.html- 
+- Followed by converting .pth -> .onnx present in [simplify onnx model.ipynb](https://github.com/SarthakGarg13/Severstal-Steel-Defect-Detection/blob/master/Simplify%20onnx%20model.ipynb) 
 - After converting model to onnx, we simplify it using the [Onnx-Simplifier](https://github.com/daquexian/onnx-simplifier).
 - Followed by creating TensorRT engine(model.trt) and serializing it for later use.
 
