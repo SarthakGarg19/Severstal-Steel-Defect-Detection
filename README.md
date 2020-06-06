@@ -20,13 +20,21 @@ The benefits of mixed precision training are:
 Using mixed precision training requires two steps:
 
 1. Porting the model to use the FP16 data type where appropriate.
-2. Using loss scaling to preserve small gradient values.
+1. Using loss scaling to preserve small gradient values.
 
 ```
 model, optimizer = amp.initialize(model, optimizer, opt_level="O1")
 with amp.scale_loss(loss, optimizer) as scaled_loss:
     scaled_loss.backward()
 ```
+
+## Neural Network Architecture
+
+[U-net](https://arxiv.org/abs/1505.04597) is used to solve the segmentation problem. U-net model is mostly used for Biomedical use-cases. It follows an encoder-decoder architecture and consists of mainly convolution layers and no-dense layers. It downscales the image to learn the "WHAT" in the images and then upscales the convolution layer to learn the "WHERE" in the images
+<p align="center">
+<img src = "https://github.com/SarthakGarg13/Severstal-Steel-Defect-Detection/blob/master/images/unet.JPG">
+</p>
+
 
 ## TensorRT
 
@@ -38,7 +46,7 @@ Some training frameworks such as TensorFlow have integrated TensorRT so that it 
 <img src = "https://github.com/SarthakGarg13/Severstal-Steel-Defect-Detection/blob/master/images/tensorrt.png">
 </p>
 
-
+## Model Conversion PyTorch-> ONNX-> TRT
 TensorRT engine could be converted from the following frameworks using UFF parser, ONNX parser or TFTRT. The TensorRT API includes implementations for the most common deep learning layers. You can also use the C++ Plugin API or Python Plugin API to provide implementations for infrequently used or more innovative layers that are not supported out-of-the-box by TensorRT.
 
 We have used the ONNX-Parser for the conversion Pytorch-TensorRT.
@@ -76,9 +84,7 @@ Docker Images for the Jupyter notebooks:
 ## References
 
 1. Mixed Precision Training Doc: https://docs.nvidia.com/deeplearning/performance/mixed-precision-training/index.html 
-
-2. TensorRT Doc: https://docs.nvidia.com/deeplearning/tensorrt/developer-guide/index.html
-
-3. Onnx simplifier https://github.com/daquexian/onnx-simplifier
-
-4. Dataset link https://www.kaggle.com/c/severstal-steel-defect-detection/data
+1. TensorRT Doc: https://docs.nvidia.com/deeplearning/tensorrt/developer-guide/index.html
+1. Onnx simplifier https://github.com/daquexian/onnx-simplifier
+1. Dataset link https://www.kaggle.com/c/severstal-steel-defect-detection/data
+1. U-Net: https://arxiv.org/abs/1505.04597
