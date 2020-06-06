@@ -46,7 +46,7 @@ Some training frameworks such as TensorFlow have integrated TensorRT so that it 
 <img src = "https://github.com/SarthakGarg13/Severstal-Steel-Defect-Detection/blob/master/images/tensorrt.png">
 </p>
 
-### Model Conversion PyTorch-> ONNX-> TRT
+## Model Conversion PyTorch-> ONNX-> TRT
 TensorRT engine could be converted from the following frameworks using UFF parser, ONNX parser or TFTRT. The TensorRT API includes implementations for the most common deep learning layers. You can also use the C++ Plugin API or Python Plugin API to provide implementations for infrequently used or more innovative layers that are not supported out-of-the-box by TensorRT.
 
 We have used the ONNX-Parser for the conversion Pytorch-TensorRT.
